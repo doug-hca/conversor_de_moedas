@@ -35,7 +35,7 @@ Este projeto é um conversor de moedas baseado em Flask, que consome uma API de 
 ### Passos
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seuusuario/conversor_de_moedas.git
+   git clone https://github.com/doug-hca/conversor_de_moedas.git
    cd conversor_de_moedas
    ```
 2. Instale as dependências:
@@ -56,8 +56,3 @@ O projeto utiliza a API pública [Exchange Rate API](https://open.er-api.com/) p
 
 ## 📝 Licença
 Este projeto está licenciado sob a MIT License.
-
-## 📞 Contato
-Caso tenha dúvidas ou sugestões, entre em contato:
-- 📧 Email: seuemail@email.com
-- 🔗 GitHub: [seuusuario](https://github.com/seuusuario)
