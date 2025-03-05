@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Câmbio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Conversor de Câmbio</h1>
+    </header>
+
+    <main class="main-container">
+    <!-- Duas colunas lado a lado -->
+    <div class="row">
+        <div class="coluna">
+            <label for="valor">Valor</label>
+            <select id="moeda_origem">
+                {% for moeda in taxas.keys() %}
+                    <option value="{{ moeda }}">{{ moeda }}</option>
+                {% endfor %}
+            </select>
+            <div class="input-box">
+                <input type="text" id="valor" placeholder="Digite um valor">
+            </div>
+        </div>
+
+        <div class="coluna">
+            <label for="convertido">Converter para</label>
+            <select id="moeda_destino">
+                {% for moeda in taxas.keys() %}
+                    <option value="{{ moeda }}">{{ moeda }}</option>
+                {% endfor %}
+            </select>
+            <div class="input-box">
+                <input type="text" id="convertido" readonly>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linha separada para a última atualização -->
+    <p id="ultima-atualizacao">Última atualização: {{ ultima_atualizacao }}</p>
+    </main>
+
+
+
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
